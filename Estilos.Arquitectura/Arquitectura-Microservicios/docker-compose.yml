@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  users:
+    build:
+      context: ./user_service
+      dockerfile: Dockerfile.users
+    ports:
+      - "5000:5000"
+
+  orders:
+    build:
+      context: ./order_service
+      dockerfile: Dockerfile.orders
+    ports:
+      - "5001:5001"
